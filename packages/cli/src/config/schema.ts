@@ -25,13 +25,13 @@ export const schema = {
 		type: {
 			doc: 'Type of database to use',
 			format: ['sqlite', 'mariadb', 'mysqldb', 'postgresdb'] as const,
-			default: 'sqlite',
+			default: 'postgresdb', //! 'sqlite',
 			env: 'DB_TYPE',
 		},
 		tablePrefix: {
 			doc: 'Prefix for table names',
 			format: '*',
-			default: '',
+			default: '', //! '',
 			env: 'DB_TABLE_PREFIX',
 		},
 		logging: {
@@ -58,7 +58,7 @@ export const schema = {
 			database: {
 				doc: 'PostgresDB Database',
 				format: String,
-				default: 'n8n',
+				default: 'spaastic_automation', //! 'n8n',
 				env: 'DB_POSTGRESDB_DATABASE',
 			},
 			host: {
@@ -70,19 +70,19 @@ export const schema = {
 			password: {
 				doc: 'PostgresDB Password',
 				format: String,
-				default: '',
+				default: 'new_user_password', //! '',
 				env: 'DB_POSTGRESDB_PASSWORD',
 			},
 			port: {
 				doc: 'PostgresDB Port',
 				format: Number,
-				default: 5432,
+				default: 5435, //! 5432,
 				env: 'DB_POSTGRESDB_PORT',
 			},
 			user: {
 				doc: 'PostgresDB User',
 				format: String,
-				default: 'root',
+				default: 'new_user_name', //! 'root',
 				env: 'DB_POSTGRESDB_USER',
 			},
 			schema: {
